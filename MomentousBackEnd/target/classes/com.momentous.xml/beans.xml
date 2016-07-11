@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="menuBean" class="com.momentous.beans.MenuBean">
+       </bean>
+
+       <bean id="itemBean" class="com.momentous.beans.ItemBean">
+       </bean>
+       
+       <!-- list bean -->
+       <bean id="customerBean" class="com.momentous.beans.CustomerBean">
+              <property name="lists">
+                     <list>
+                            <bean class="com.momentous.beans.MenuBean">
+                                   <property name="description" value="Pizza"></property>
+                                   <property name="active" value="true"></property>
+                                   <property name="itemBean">
+                                          <list>
+                                                 <bean class="com.momentous.beans.ItemBean">
+                                                        <property name="name" value="Margarita"></property>
+                                                        <property name="description" value="Una Pizza con queso"></property>
+                                                        <property name="price" value="10.1"></property>
+                                                        <property name="raking" value="9"></property>
+                                                        <property name="coin" value="BF"></property>
+                                                        <property name="photo" value="classpath:/img/pizza.jpg"></property>
+                                                        <property name="dayWeeks">
+                                                               <list>
+                                                                      <value>lunes</value>
+                                                                      <value>martes</value>
+                                                                      <value>miercoles</value>
+                                                               </list>
+                                                        </property>
+
+                                                        <property name="dateStart">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="09-07-2016" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="dateEnd">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="11-07-2016" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="timeStart">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="00-00-0000 14:00" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="timeEnd">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="00-00-0000 20:00" />
+                                                               </bean>
+                                                        </property>
+
+                                                 </bean>
+                                                 <bean class="com.momentous.beans.ItemBean">
+                                                        <property name="name" value="Margarita"></property>
+                                                        <property name="description" value="Una Pizza con queso"></property>
+                                                        <property name="submenu">
+                                                               <bean class="com.momentous.beans.MenuBean">
+                                                                      <property name="description" value="Pizza00"></property>
+                                                                      <property name="active" value="true"></property>
+                                                                      <property name="itemBean">
+                                                                             <bean class="com.momentous.beans.ItemBean">
+                                                                                    <property name="name" value="Postres de helados"></property>
+                                                                                    <property name="description" value="Combo especial de la pizza"></property>
+                                                                                    <property name="price" value="5"></property>
+                                                                                    <property name="raking" value="10"></property>
+                                                                                    <property name="coin" value="BF"></property>
+                                                                                    <property name="photo" value="classpath:/img/pizza.jpg"></property>
+                                                                                    <property name="dayWeeks">
+                                                                                           <list>
+                                                                                                  <value>lunes</value>
+                                                                                                  <value>martes</value>
+                                                                                                  <value>miercoles</value>
+                                                                                           </list>
+                                                                                    </property>
+
+                                                                                    <property name="dateStart">
+                                                                                           <bean factory-bean="dateFormater" factory-method="parse">
+                                                                                                  <constructor-arg value="09-07-2016" />
+                                                                                           </bean>
+                                                                                    </property>
+
+                                                                                    <property name="dateEnd">
+                                                                                           <bean factory-bean="dateFormater" factory-method="parse">
+                                                                                                  <constructor-arg value="11-07-2016" />
+                                                                                           </bean>
+                                                                                    </property>
+
+                                                                                    <property name="timeStart">
+                                                                                           <bean factory-bean="dateFormater" factory-method="parse">
+                                                                                                  <constructor-arg value="00-00-0000 14:00" />
+                                                                                           </bean>
+                                                                                    </property>
+
+                                                                                    <property name="timeEnd">
+                                                                                           <bean factory-bean="dateFormater" factory-method="parse">
+                                                                                                  <constructor-arg value="00-00-0000 20:00" />
+                                                                                           </bean>
+                                                                                    </property>
+
+                                                                             </bean>
+                                                                      </property>
+                                                               </bean>
+                                                        </property>
+                                                        <property name="price" value="15.4"></property>
+                                                        <property name="raking" value="4"></property>
+                                                        <property name="coin" value="BF"></property>
+                                                        <property name="photo" value="classpath:/img/pizza.jpg"></property>
+                                                        <property name="dayWeeks">
+                                                               <list>
+                                                                      <value>lunes</value>
+                                                                      <value>martes</value>
+                                                                      <value>miercoles</value>
+                                                               </list>
+                                                        </property>
+
+                                                        <property name="dateStart">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="09-07-2016" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="dateEnd">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="11-07-2016" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="timeStart">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="00-00-0000 14:00" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="timeEnd">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="00-00-0000 20:00" />
+                                                               </bean>
+                                                        </property>
+
+                                                 </bean>
+                                          </list>
+                                   </property>
+                            </bean>
+                            <bean class="com.momentous.beans.MenuBean">
+                                   <property name="description" value="Macarrones"></property>
+                                   <property name="active" value="true"></property>
+                                   <property name="itemBean">
+                                          <list>
+                                                 <bean class="com.momentous.beans.ItemBean">
+                                                        <property name="name" value="Encebollado"></property>
+                                                        <property name="description" value="Una Pizza con queso"></property>
+                                                        <property name="price" value="10.1"></property>
+                                                        <property name="raking" value="9"></property>
+                                                        <property name="coin" value="BF"></property>
+                                                        <property name="photo" value="classpath:/img/pizza.jpg"></property>
+                                                        <property name="dayWeeks">
+                                                               <list>
+                                                                      <value>lunes</value>
+                                                                      <value>martes</value>
+                                                                      <value>miercoles</value>
+                                                               </list>
+                                                        </property>
+
+                                                        <property name="dateStart">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="09-07-2016" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="dateEnd">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="11-07-2016" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="timeStart">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="00-00-0000 14:00" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="timeEnd">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="00-00-0000 20:00" />
+                                                               </bean>
+                                                        </property>
+
+                                                 </bean>
+                                          </list>
+                                   </property>
+                            </bean>
+                            <bean class="com.momentous.beans.MenuBean">
+                                   <property name="description" value="Pescado"></property>
+                                   <property name="active" value="false"></property>
+                                   <property name="itemBean">
+                                          <list>
+                                                 <bean class="com.momentous.beans.ItemBean">
+                                                        <property name="name" value="Merluza al Ajillo"></property>
+                                                        <property name="description" value="Una Pizza con queso"></property>
+                                                        <property name="price" value="10.1"></property>
+                                                        <property name="raking" value="9"></property>
+                                                        <property name="coin" value="BF"></property>
+                                                        <property name="photo" value="classpath:/img/merluza.jpg"></property>
+                                                        <property name="dayWeeks">
+                                                               <list>
+                                                                      <value>martes</value>
+                                                                      <value>miercoles</value>
+                                                                      <value>jueves</value>
+                                                               </list>
+                                                        </property>
+
+                                                        <property name="dateStart">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="09-07-2016" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="dateEnd">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="11-07-2016" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="timeStart">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="00-00-0000 14:00" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="timeEnd">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="00-00-0000 20:00" />
+                                                               </bean>
+                                                        </property>
+
+                                                 </bean>
+                                                 <bean class="com.momentous.beans.ItemBean">
+                                                        <property name="name" value="Camarones"></property>
+                                                        <property name="description" value="Una Pizza con queso"></property>
+                                                        <property name="price" value="18.1"></property>
+                                                        <property name="raking" value="9"></property>
+                                                        <property name="coin" value="BF"></property>
+                                                        <property name="photo" value="classpath:/img/camarones.jpg"></property>
+                                                        <property name="dayWeeks">
+                                                               <list>
+                                                                      <value>lunes</value>
+                                                                      <value>martes</value>
+                                                                      <value>miercoles</value>
+                                                               </list>
+                                                        </property>
+
+                                                        <property name="dateStart">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="09-07-2016" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="dateEnd">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="11-07-2016" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="timeStart">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="00-00-0000 14:00" />
+                                                               </bean>
+                                                        </property>
+
+                                                        <property name="timeEnd">
+                                                               <bean factory-bean="dateFormater" factory-method="parse">
+                                                                      <constructor-arg value="00-00-0000 20:00" />
+                                                               </bean>
+                                                        </property>
+
+                                                 </bean>
+                                          </list>
+                                   </property>
+                            </bean>
+                     </list>
+              </property>
+       </bean>
+
+       <bean id="dateFormater" class="java.text.SimpleDateFormat">
+              <constructor-arg value="dd-MM-yyyy" />
+       </bean>
+
+       <bean id="timerFormater" class="java.text.SimpleDateFormat">
+              <constructor-arg value="dd-MM-yyyy HH:mm" />
+       </bean>
+
+</beans>
